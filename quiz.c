@@ -2,12 +2,12 @@
 #include<conio.h>
 #include<string.h>
 int main() { 
-  char quest [5][100];
+  char quest [6][100];
   char optionl [3][20],option2 [3][20], 
   option3 [3][20],option4 [3][20], 
   option5 [3][20]; 
   int response[5], correct_ans[5], option,i, marks;  
- clrscr();  
+//  clrscr();  
   strcpy(quest[0], "Who invented C language?");  
   strcpy (optionl[0],"1.  Dennis Ritchie");  
   strcpy(optionl[1] ,"2.  James Gosling");  
@@ -28,11 +28,18 @@ int main() {
   strcpy(option4[1] ,"2.  No");  
   strcpy(option4[2] ,"3.  Maybe");  
   correct_ans[3] = 1;  
+
   strcpy(quest[4], "What does C language uses?");  
   strcpy(option5[0],"l.  Compiler");  
   strcpy(option5[1],"2.  Interpreter");  
   strcpy(option5[2],"3.  Both 1 and 2");  
   correct_ans[4] = 0; 
+
+  strcpy(quest[5], "Can we use classes in C language?");  
+  strcpy(option5[0],"l. yes");  
+  strcpy(option5[1],"2. no ");  
+  strcpy(option5[2],"3. May be");  
+  correct_ans[5] = 1; 
   do {  
     printf("\n\n\n\n QUIZ PROGRAM"); 
     printf("\n*******************");  

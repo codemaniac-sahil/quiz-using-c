@@ -11,6 +11,7 @@ int main() {
   option6 [3][20],option7 [3][20];  
   int response[7], correct_ans[7], option,i, marks;  
 //  clrscr();  
+
   strcpy(quest[0], "Who invented C language?");  
   strcpy (optionl[0],"1.  Dennis Ritchie");  
   strcpy(optionl[1] ,"2.  James Gosling");  
@@ -52,6 +53,13 @@ int main() {
   strcpy(option7[1],"2. START Character ");  
   strcpy(option7[2],"3. None ");  
   correct_ans[6] = 0; 
+
+  strcpy(quest[7], "An exception is __");  
+  strcpy(option8[0],"1. Runtime error");  
+  strcpy(option8[1],"2. Compile time error");  
+  strcpy(option8[2],"3. Logical error");  
+  correct_ans[7] = 0; 
+
   do {
     printf("\n*************************\n\n");    
     printf(" >>>>> QUIZ PROGRAM <<<<<\n"); 
@@ -112,7 +120,14 @@ int main() {
               printf("\n %s", option7[i]);   
             }   
             printf ("\n\n Enter your answer number: ");   
-            scanf("%d", &response[6]);   
+            scanf("%d", &response[6]); 
+
+            printf ("\n %s \n", quest [7]);   
+            for(i=0;i<3;i++)   {   
+              printf("\n %s", optionl[i]);   
+            }   
+            printf ("\n\n Enter your answer number: ");   
+            scanf("%d", &response[7]);  
 
             break;  
         case 2:   
@@ -125,6 +140,7 @@ int main() {
             printf("\n\n%s \n%s",quest[4] ,option5[correct_ans[4]]);   
             printf("\n\n%s \n%s",quest[5] ,option6[correct_ans[5]]);   
             printf("\n\n%s \n%s",quest[6] ,option7[correct_ans[6]]);   
+            printf("\n\n%s \n%s",quest[7] ,option8[correct_ans[7]]);   
             printf("\n\n");
             break;  
         case 3:   

@@ -4,12 +4,12 @@
 #include<stdlib.h>
 
 int main() { 
-  char quest [7][100];
+  char quest [8][100];
   char optionl [3][20],option2 [3][20], 
   option3 [3][20],option4 [3][20], 
   option5 [3][20],
   option6 [3][20],option7 [3][20];  
-  int response[7], correct_ans[7], option,i, marks;  
+  int response[8], correct_ans[8], option,i, marks;  
 //  clrscr();  
 
   strcpy(quest[0], "Who invented C language?");  
@@ -59,6 +59,12 @@ int main() {
   strcpy(option8[1],"2. Compile time error");  
   strcpy(option8[2],"3. Logical error");  
   correct_ans[7] = 0; 
+
+  strcpy(quest[8], "#include<stdio.h> is");  
+  strcpy(option9[0],"1. preprocessor directive");  
+  strcpy(option9[1],"2. while");  
+  strcpy(option9[2],"3. do-while");  
+  correct_ans[8] = 0; 
 
   do {
     printf("\n*************************\n\n");    
@@ -125,9 +131,16 @@ int main() {
             printf ("\n %s \n", quest [7]);   
             for(i=0;i<3;i++)   {   
               printf("\n %s", optionl[i]);   
-            }   
+            }  
             printf ("\n\n Enter your answer number: ");   
-            scanf("%d", &response[7]);  
+            scanf("%d", &response[7]); 
+
+            printf ("\n %s \n", quest [8]);   
+            for(i=0;i<3;i++)   {   
+              printf("\n %s", optionl[i]);  
+            } 
+            printf ("\n\n Enter your answer number: ");   
+            scanf("%d", &response[8]);  
 
             break;  
         case 2:   
@@ -140,7 +153,8 @@ int main() {
             printf("\n\n%s \n%s",quest[4] ,option5[correct_ans[4]]);   
             printf("\n\n%s \n%s",quest[5] ,option6[correct_ans[5]]);   
             printf("\n\n%s \n%s",quest[6] ,option7[correct_ans[6]]);   
-            printf("\n\n%s \n%s",quest[7] ,option8[correct_ans[7]]);   
+            printf("\n\n%s \n%s",quest[7] ,option8[correct_ans[7]]);
+            printf("\n\n%s \n%s",quest[8] ,option8[correct_ans[8]]);   
             printf("\n\n");
             break;  
         case 3:   
@@ -150,7 +164,7 @@ int main() {
                 marks++;   
               }  
             }   
-            printf ("\n Out of 7 you score %d",marks);   
+            printf ("\n Out of 8 you score %d",marks);   
             break; 
         case 4:
           printf(">>>> Exited Successfully <<<<");

@@ -5,7 +5,7 @@
 
 int main()
 {
-  char quest[11][100];
+  char quest[12][100];
   char optionl[3][20], option2[3][20],
       option3[3][20], option4[3][20],
       option5[3][20],
@@ -13,7 +13,8 @@ int main()
   char option8[3][20];
   char option9[3][20];
   char option10[3][20];
-  int response[10], correct_ans[10], option, i, marks;
+  char option11[3][20];
+  int response[11], correct_ans[11], option, i, marks;
   //  clrscr();
 
   strcpy(quest[0], "Who invented C language?");
@@ -81,6 +82,12 @@ int main()
   strcpy(option10[1], "2. %f");
   strcpy(option10[2], "3 .%c");
   correct_ans[10] = 0;
+
+  strcpy(quest[11], "In C, what is the correct hierarchy of arithmetic operations?");
+  strcpy(option11[0], "1. * + / -");
+  strcpy(option11[1], "2. / * + -");
+  strcpy(option11[2], "3. + - / *");
+  correct_ans[11] = 0;
 
   do
   {
@@ -193,6 +200,16 @@ int main()
 
       scanf("%d", &response[10]);
 
+      for (i = 0; i < 3; i++)
+      {
+
+        printf("\n %s", option11[i]);
+      }
+
+      printf("\n\n Enter your answer number: ");
+
+      scanf("%d", &response[11]);
+
       break;
     case 2:
       printf("\n\nCHECK THE CORRECT ANSWERS");
@@ -208,18 +225,19 @@ int main()
       printf("\n\n%s \n%s", quest[8], option8[correct_ans[8]]);
       printf("\n\n%s \n%s", quest[9], option9[correct_ans[9]]);
       printf("\n\n%s \n%s", quest[10], option9[correct_ans[10]]);
+      printf("\n\n%s \n%s", quest[11], option11[correct_ans[11]]);
       printf("\n\n");
       break;
     case 3:
       marks = 0;
-      for (i = 0; i <= 9; i++)
+      for (i = 0; i <= 11; i++)
       {
         if (correct_ans[i] + 1 == response[i])
         {
           marks++;
         }
       }
-      printf("\n Out of 10 you score %d", marks);
+      printf("\n Out of 12 you score %d", marks);
       break;
     case 4:
       printf(">>>> Exited Successfully <<<<");

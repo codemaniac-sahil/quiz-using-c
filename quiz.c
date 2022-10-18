@@ -5,7 +5,7 @@
 
 int main()
 {
-  char quest[14][100];
+  char quest[15][100];
   char optionl[3][20], option2[3][20],
       option3[3][20], option4[3][20],
       option5[3][20],
@@ -17,7 +17,8 @@ int main()
   char option12[3][20];
   char option13[3][20];
   char option14[3][20];
-  int response[13], correct_ans[13], option, i, marks;
+  char option15[3][20];
+  int response[15], correct_ans[15], option, i, marks;
   //  clrscr();
 
   strcpy(quest[0], "Who invented C language?");
@@ -103,6 +104,12 @@ int main()
   strcpy(option14[1], "2. /");
   strcpy(option14[2], "3. ;");
   correct_ans[13] = 2;
+
+  strcpy(quest[14], " What kind of files can be created with C programming?");
+  strcpy(option15[0], "1. Images (*.jpg, *.png, *.gif…)");
+  strcpy(option15[1], "2. Sources (*.c)");
+  strcpy(option15[2], "3. Text files (*.txt)");
+  correct_ans[14] = 1;
 
   do
   {
@@ -242,6 +249,14 @@ int main()
       printf("\n\n Enter your answer number: ");
       scanf("%d", &response[13]);
 
+      printf("\n %s \n", quest[14]);
+      for (i = 0; i < 3; i++)
+      {
+        printf("\n %s", option15[i]);
+      }
+      printf("\n\n Enter your answer number: ");
+      scanf("%d", &response[14]);
+
       break;
     case 2:
       printf("\n\nCHECK THE CORRECT ANSWERS");
@@ -260,18 +275,19 @@ int main()
       printf("\n\n%s \n%s", quest[11], option12[correct_ans[11]]);
       printf("\n\n%s \n%s", quest[12], option13[correct_ans[12]]);
       printf("\n\n%s \n%s", quest[13], option14[correct_ans[13]]);
+      printf("\n\n%s \n%s", quest[14], option15[correct_ans[14]]);
       printf("\n\n");
       break;
     case 3:
       marks = 0;
-      for (i = 0; i <= 13; i++)
+      for (i = 0; i <= 14; i++)
       {
         if (correct_ans[i] + 1 == response[i])
         {
           marks++;
         }
       }
-      printf("\n Out of 14 you score %d", marks);
+      printf("\n Out of 15 you score %d", marks);
       break;
     case 4:
       printf(">>>> Exited Successfully <<<<");

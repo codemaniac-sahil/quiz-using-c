@@ -65,7 +65,12 @@ int main() {
   strcpy(option9[1],"2. while");  
   strcpy(option9[2],"3. do-while");  
   correct_ans[8] = 0; 
-
+  
+ strcpy(quest[9], "Why we use getch?");  
+  strcpy(option4 [0],"l.  To hold the output screen for sometime");  
+  strcpy(option4[1] ,"2.  Not use");  
+  strcpy(option4[2] ,"3.  Maybe used ");  
+  correct_ans[9] = 0; 
   do {
     printf("\n*************************\n\n");    
     printf(" >>>>> QUIZ PROGRAM <<<<<\n"); 
@@ -140,7 +145,19 @@ int main() {
               printf("\n %s", optionl[i]);  
             } 
             printf ("\n\n Enter your answer number: ");   
-            scanf("%d", &response[8]);  
+            scanf("%d", &response[8]);
+        
+            printf ("\n %s \n", quest [9]);   
+
+            for(i=0;i<3;i++)   {   
+
+              printf("\n %s", optionl[i]);  
+
+            } 
+
+            printf ("\n\n Enter your answer number: ");   
+
+            scanf("%d", &response[9 pp]);
 
             break;  
         case 2:   
@@ -154,7 +171,8 @@ int main() {
             printf("\n\n%s \n%s",quest[5] ,option6[correct_ans[5]]);   
             printf("\n\n%s \n%s",quest[6] ,option7[correct_ans[6]]);   
             printf("\n\n%s \n%s",quest[7] ,option8[correct_ans[7]]);
-            printf("\n\n%s \n%s",quest[8] ,option8[correct_ans[8]]);   
+            printf("\n\n%s \n%s",quest[8] ,option8[correct_ans[8]]);
+            printf("\n\n%s \n%s",quest[9] ,option9[correct_ans[9]]);
             printf("\n\n");
             break;  
         case 3:   

@@ -212,14 +212,14 @@ int main()
       break;
     case 3:
       marks = 0;
-      for (i = 0; i <= 6; i++)
+      for (i = 0; i <= 9; i++)
       {
         if (correct_ans[i] + 1 == response[i])
         {
           marks++;
         }
       }
-      printf("\n Out of 8 you score %d", marks);
+      printf("\n Out of 10 you score %d", marks);
       break;
     case 4:
       printf(">>>> Exited Successfully <<<<");

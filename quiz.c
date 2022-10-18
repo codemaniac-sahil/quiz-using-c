@@ -5,7 +5,7 @@
 
 int main()
 {
-  char quest[12][100];
+  char quest[13][100];
   char optionl[3][20], option2[3][20],
       option3[3][20], option4[3][20],
       option5[3][20],
@@ -14,7 +14,9 @@ int main()
   char option9[3][20];
   char option10[3][20];
   char option11[3][20];
-  int response[11], correct_ans[11], option, i, marks;
+  char option12[3][20];
+  char option13[3][20];
+  int response[12], correct_ans[12], option, i, marks;
   //  clrscr();
 
   strcpy(quest[0], "Who invented C language?");
@@ -72,22 +74,28 @@ int main()
   correct_ans[8] = 0;
 
   strcpy(quest[9], "Why we use getch?");
-  strcpy(option4[0], "l.  To hold the output screen for sometime");
-  strcpy(option4[1], "2.  Not use");
-  strcpy(option4[2], "3.  Maybe used ");
+  strcpy(option10[0], "l.  To hold the output screen for sometime");
+  strcpy(option10[1], "2.  Not use");
+  strcpy(option10[2], "3.  Maybe used ");
   correct_ans[9] = 0;
 
   strcpy(quest[10], "Which Format Specifier is used to  specify an integer in C");
-  strcpy(option10[0], "1 .%d");
-  strcpy(option10[1], "2. %f");
-  strcpy(option10[2], "3 .%c");
+  strcpy(option11[0], "1 .%d");
+  strcpy(option11[1], "2. %f");
+  strcpy(option11[2], "3 .%c");
   correct_ans[10] = 0;
 
   strcpy(quest[11], "In C, what is the correct hierarchy of arithmetic operations?");
-  strcpy(option11[0], "1. * + / -");
-  strcpy(option11[1], "2. / * + -");
-  strcpy(option11[2], "3. + - / *");
-  correct_ans[11] = 0;
+  strcpy(option12[0], "1. * + / -");
+  strcpy(option12[1], "2. / * + -");
+  strcpy(option12[2], "3. + - / *");
+  correct_ans[11] = 1;
+
+  strcpy(quest[12], " A preprocessor directive is a statement that begins with_____");
+  strcpy(option13[0], "1. {");
+  strcpy(option13[1], "2. #");
+  strcpy(option13[2], "3. /*");
+  correct_ans[12] = 1;
 
   do
   {
@@ -163,7 +171,7 @@ int main()
       printf("\n %s \n", quest[7]);
       for (i = 0; i < 3; i++)
       {
-        printf("\n %s", optionl[i]);
+        printf("\n %s", option8[i]);
       }
       printf("\n\n Enter your answer number: ");
       scanf("%d", &response[7]);
@@ -171,7 +179,7 @@ int main()
       printf("\n %s \n", quest[8]);
       for (i = 0; i < 3; i++)
       {
-        printf("\n %s", optionl[i]);
+        printf("\n %s", option9[i]);
       }
       printf("\n\n Enter your answer number: ");
       scanf("%d", &response[8]);
@@ -181,7 +189,7 @@ int main()
       for (i = 0; i < 3; i++)
       {
 
-        printf("\n %s", optionl[i]);
+        printf("\n %s", option10[i]);
       }
 
       printf("\n\n Enter your answer number: ");
@@ -193,7 +201,7 @@ int main()
       for (i = 0; i < 3; i++)
       {
 
-        printf("\n %s", option10[i]);
+        printf("\n %s", option11[i]);
       }
 
       printf("\n\n Enter your answer number: ");
@@ -203,12 +211,22 @@ int main()
       for (i = 0; i < 3; i++)
       {
 
-        printf("\n %s", option11[i]);
+        printf("\n %s", option12[i]);
       }
 
       printf("\n\n Enter your answer number: ");
 
       scanf("%d", &response[11]);
+
+      for (i = 0; i < 3; i++)
+      {
+
+        printf("\n %s", option13[i]);
+      }
+
+      printf("\n\n Enter your answer number: ");
+
+      scanf("%d", &response[12]);
 
       break;
     case 2:
@@ -222,22 +240,23 @@ int main()
       printf("\n\n%s \n%s", quest[5], option6[correct_ans[5]]);
       printf("\n\n%s \n%s", quest[6], option7[correct_ans[6]]);
       printf("\n\n%s \n%s", quest[7], option8[correct_ans[7]]);
-      printf("\n\n%s \n%s", quest[8], option8[correct_ans[8]]);
-      printf("\n\n%s \n%s", quest[9], option9[correct_ans[9]]);
-      printf("\n\n%s \n%s", quest[10], option9[correct_ans[10]]);
-      printf("\n\n%s \n%s", quest[11], option11[correct_ans[11]]);
+      printf("\n\n%s \n%s", quest[8], option9[correct_ans[8]]);
+      printf("\n\n%s \n%s", quest[9], option10[correct_ans[9]]);
+      printf("\n\n%s \n%s", quest[10], option11[correct_ans[10]]);
+      printf("\n\n%s \n%s", quest[11], option12[correct_ans[11]]);
+      printf("\n\n%s \n%s", quest[12], option13[correct_ans[12]]);
       printf("\n\n");
       break;
     case 3:
       marks = 0;
-      for (i = 0; i <= 11; i++)
+      for (i = 0; i <= 12; i++)
       {
         if (correct_ans[i] + 1 == response[i])
         {
           marks++;
         }
       }
-      printf("\n Out of 12 you score %d", marks);
+      printf("\n Out of 13 you score %d", marks);
       break;
     case 4:
       printf(">>>> Exited Successfully <<<<");
